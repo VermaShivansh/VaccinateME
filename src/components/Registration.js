@@ -55,7 +55,7 @@ function Registration() {
         setsendingOTP(false)
         setotpRequest(true)
       } catch {
-        //console.log("error")
+        console.log("error")
       }
     }
   }
@@ -73,7 +73,7 @@ function Registration() {
           draft.phone = phoneNumber
         })
       } catch {
-        // console.log("error")
+        console.log("error")
       }
     }
   }
@@ -98,7 +98,7 @@ function Registration() {
           })
         }
       } catch (e) {
-        // console.log(e)
+        console.log(e)
       }
     }
   }
@@ -115,7 +115,7 @@ function Registration() {
         setisFormSubmitted(true)
         // console.log(response2.data)
       } catch (e) {
-        // console.log(e)
+        console.log(e)
       }
     }
   }, [userData.locations])

@@ -14,22 +14,22 @@ function StaffDetails(props) {
       let response = await Axios.post("/login/vendor")
       setdata(response.data.local)
     } catch (e) {
-      // console.log(e)
+      console.log(e)
     }
   }
   async function handleSubmit(e) {
     e.preventDefault()
     try {
-      console.log(customerId, authCode)
+      // console.log(customerId, authCode)
       let response = await Axios.post("login/vendor/vaccinated", { customerId, authCode })
-      console.log(response)
+      // console.log(response)
     } catch (e) {
       console.log(e)
     }
   }
 
   data.map((element, index) => {
-    console.log(element, element.registeredUser.length)
+    // console.log(element, element.registeredUser.length)
     return 1
   })
 

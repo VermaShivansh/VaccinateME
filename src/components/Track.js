@@ -12,11 +12,11 @@ function Track() {
   async function handleSubmit(e) {
     e.preventDefault()
     try {
-      console.log(customerId)
+      // console.log(customerId)
       setisTracking(true)
       let response = await Axios.post("/login", { customerId })
       setisTracking(false)
-      console.log(response.data)
+      // console.log(response.data)
       setuserData(response.data)
       settrackRequest(true)
     } catch {
