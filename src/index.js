@@ -4,7 +4,7 @@ import "./index.css"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 import Axios from "axios"
-Axios.defaults.baseURL = "https://dtd-vaccination.herokuapp.com"
+Axios.defaults.baseURL = "https://vaccinate-me-backend.herokuapp.com/"
 
 ReactDOM.render(<App />, document.getElementById("root"))
 
