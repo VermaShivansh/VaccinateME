@@ -1,0 +1,225 @@
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+  overflow-x: hidden !important;
+  max-width: 100vw;
+}
+* {
+  box-sizing: border-box;
+}
+#root {
+  width: 100%;
+  height: 100%;
+  min-height: 120vh;
+}
+
+/***********Navbar Below*************/
+
+.navBar {
+  position: absolute;
+  z-index: 3;
+}
+.navbar {
+  width: 100%;
+  z-index: 9999;
+  background: #c2e59c !important; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c) !important; /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #64b3f4, #c2e59c) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar-nav {
+  right: 0;
+}
+.nav-link {
+  border-radius: 15px;
+}
+.nav-link:hover,
+.navbar-nav .active {
+  background: white;
+  transition: all 200ms ease-in-out;
+  color: black;
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar {
+    width: 100%;
+  }
+  .navbar-nav {
+    background: #c2e59c !important; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c) !important; /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #64b3f4, #c2e59c) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    text-align: center;
+  }
+  .nav-link {
+    width: 100%;
+  }
+}
+.navbar-brand {
+  font-size: xx-large;
+}
+/********Navbar Above**********/
+
+/*****Header******/
+.headerdesign {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0 100%, 0 0);
+  height: 100vh;
+  left: 0;
+  right: 0;
+  background: #c2e59c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* @media (min-height: 769px) {
+    .headerdesign{
+      height: 95vh;
+    }
+  } */
+
+/*****Header Above*****/
+
+/*****Register****/
+.midbody {
+  width: 100vw !important;
+  min-height: 100%;
+  background-color: #090b1b !important;
+}
+.midbodyContent {
+  color: white;
+  height: 40vh;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 1.3em;
+}
+.RegistrationForm {
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 1.3em;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.OTP {
+  border-radius: 10px;
+  color: black;
+}
+
+@media only screen and (min-width: 992px) {
+  .FullDetailsEntryContainer {
+    margin-top: 25vh !important;
+  }
+}
+
+/****Register Above****/
+/***Track****/
+.userProfile {
+  color: white;
+}
+.vaccination {
+  max-width: 180px;
+}
+
+.vaccination .fas {
+  font-size: 140px;
+  padding: 3px 10px;
+}
+.Aadhar p {
+  font-size: 24px;
+}
+.cancelAppointment {
+  margin: 62px 0 0 10px;
+}
+
+.address {
+  margin: 0 0 0 10px;
+}
+
+@media (max-width: 768px) {
+  .cancelAppointment {
+    margin: 10px 0;
+  }
+  .address,
+  .authentication {
+    margin: 10px 0;
+  }
+}
+
+.Track {
+  border-radius: 10px;
+  color: black;
+}
+
+/*Staff*/
+
+.staff {
+  margin-top: 14em;
+  width: 100%;
+}
+.accordion {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100% !important;
+}
+.accordion-item {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+button {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  padding-right: 7px !important;
+  padding-left: 5px !important;
+}
+.accordion button:after {
+  transform: translateX(7px);
+}
+
+.dropdown {
+  right: 0;
+  margin-right: 8px;
+  cursor: pointer;
+}
+table {
+  margin: 0 !important;
+}
+td {
+  padding-left: 15px !important;
+}
+
+@media (max-width: 512px) {
+  .innerTable * {
+    padding: 2px !important;
+  }
+  .accordion-body {
+    padding: 2px;
+  }
+}
+.vleft {
+  width: 23vw !important;
+}
+@media (max-width: 364px) {
+  .accordionContainer {
+    width: 110% !important;
+  }
+  .vleft {
+    width: 100vw !important;
+  }
+}
+@media (max-width: 305px) {
+  .accordionContainer {
+    width: 125% !important;
+  }
+}
+@media (max-width: 250px) {
+  .accordionContainer {
+    width: 150% !important;
+  }
+}
