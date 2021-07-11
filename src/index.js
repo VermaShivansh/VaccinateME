@@ -4,7 +4,7 @@ import "./index.css"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 import Axios from "axios"
-Axios.defaults.baseURL = "http://localhost:8080"
+Axios.defaults.baseURL = process.env.baseURL
 
 ReactDOM.render(<App />, document.getElementById("root"))
 
