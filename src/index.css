@@ -17,7 +17,7 @@ body {
 
 .navBar {
   position: absolute;
-  z-index: 3;
+  z-index: 9999;
 }
 .navbar {
   width: 100%;
@@ -62,7 +62,7 @@ body {
 
 /*****Header******/
 .headerdesign {
-  z-index: 2;
+  z-index: 999;
   position: absolute;
   top: 0;
   clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0 100%, 0 0);
@@ -82,11 +82,22 @@ body {
   list-style: none;
 }
 .imageContainer {
-  top: -108px;
-  right: -40px;
+  top: 75px;
+  right: -0vw;
 }
 .tagline {
   font-size: 1.5rem;
+}
+@media only screen and (max-width: 925px) {
+  .imageContainer {
+    top: 0px;
+    right: -0vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .imageContainer {
+    display: none;
+  }
 }
 /*****Header Above*****/
 
@@ -174,6 +185,7 @@ input::-webkit-inner-spin-button {
   padding-left: 0 !important;
   padding-right: 0 !important;
   width: 100% !important;
+  z-index: 1 !important;
 }
 .accordion-item {
   border: none !important;
@@ -230,4 +242,16 @@ td {
   .accordionContainer {
     width: 150% !important;
   }
+}
+.alertingBox {
+  position: absolute !important;
+  z-index: 99999 !important;
+  margin: auto !important;
+  top: 20px !important;
+  transition: all 700ms ease-in-out !important;
+  opacity: 0 !important;
+}
+.opacity1 {
+  opacity: 1 !important;
+  transition: all 700ms ease-in-out !important;
 }
