@@ -59,24 +59,30 @@ router.post("/login/vendor/vaccinated", async (req, res) => {
     }
     const pincode = user.pincode
     const id = user._id
-    user.vaccinationSuccessful = true
-    await user.save()
+    if (!user.vaccinationSuccessfull) {
+      user.vaccinationSuccessful = true
+      await user.save()
 
-    console.log(user)
-    console.log(user._id)
-    console.log(pincode)
+      console.log(user)
+      console.log(user._id)
+      console.log(pincode)
 
-    // const local = await Local.findOne({ pincode: user.pincode });
-    // console.log(local);
-    // local.registeredUser.pop(user._id);
-    await Local.remove(pincode, id)
-    // const local=await Local.deleteOne({totalCandidates:0})
-    // console.log(local)
+      // const local = await Local.findOne({ pincode: user.pincode });
+      // console.log(local);
+      // local.registeredUser.pop(user._id);
+      await Local.remove(pincode, id)
+      // const local=await Local.deleteOne({totalCandidates:0})
+      // console.log(local)
 
-    res.status(200).json({
-      User: user,
-      message: "Successfully Vaccinated",
-    })
+      res.status(200).json({
+        User: user,
+        message: "Successfully Vaccinated",
+      })
+    } else {
+      res.status(400).json({
+        message: "Already Vaccinated",
+      })
+    }
   } catch (error) {
     res.status(500).send(error)
   }
