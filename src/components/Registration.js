@@ -233,7 +233,7 @@ function Registration() {
                   <MaskedInput mask={[/[5-9]/, /\d/, /\d/, "-", /\d/, /\d/, /\d/, "-", /\d/, /\d/, /\d/, /\d/]} required value={phoneNumber} disabled className="form-control" placeholder="Enter a phone number" guide={false} id="my-input-id" />
                 </Form.Group>
                 <Form.Group as={Col} md="4" controlId="validationAadharNumber">
-                  <Form.Label>Aadhar Number</Form.Label>
+                  <Form.Label>Aadhar Number (Do not enter original)</Form.Label>
                   <MaskedInput
                     onChange={(e) =>
                       setuserData((draft) => {
