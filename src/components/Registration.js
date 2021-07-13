@@ -133,7 +133,8 @@ function Registration() {
           </a>{" "}
           or
           <a target="_blank" href="mailto:srivastava11735@gmail.com">
-            &nbsp;srivastava11735@gmail.com{" "}
+            {" "}
+            srivastava11735@gmail.com{" "}
           </a>
           .
         </li>
