@@ -1,8 +1,6 @@
 import "./index.css"
 import React, { useState, useEffect } from "react"
-import ReactDOM from "react-dom"
-import { BrowserRouter, Switch, Route, Router } from "react-router-dom"
-import Axios from "axios"
+import { BrowserRouter } from "react-router-dom"
 
 //Components
 import Navbar from "./components/Navbar"

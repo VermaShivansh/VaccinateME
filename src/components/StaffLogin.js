@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { Form, Button } from "react-bootstrap"
-import { Redirect } from "react-router-dom"
+
 import Axios from "axios"
 
 function StaffLogin(props) {

@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react"
-import { BrowserRouter, Switch, Route, Router } from "react-router-dom"
+import { Switch, Route, Router } from "react-router-dom"
 import Registration from "./Registration"
 import StaffDetails from "./StaffDetails"
 import StaffLogin from "./StaffLogin"
