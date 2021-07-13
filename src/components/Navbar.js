@@ -17,8 +17,8 @@ function Navbar(props) {
     <div className="navBar">
       <nav className="navbar navbar-expand-lg navbar-light bg-light position-fixed">
         <div className="container-fluid position-relative">
-          <Link className="navbar-brand mx-1" to="#">
-            <img className="logo" src="../images/injection.png" width="25px" alt="" /> VaccinateME
+          <Link className="navbar-brand mx-1" to="/">
+            <img className="logo" src="https://i.ibb.co/KhHnNbP/injection.png" width="25px" alt="" /> VaccinateME
           </Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>

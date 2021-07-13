@@ -22,7 +22,7 @@ function StaffLogin(props) {
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Username</Form.Label>
-            <Form.Control onChange={(e) => setusername(e.target.value)} type="text" placeholder="Enter Username" />
+            <Form.Control onChange={(e) => setusername(e.target.value)} autoFocus type="text" placeholder="Enter Username" />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">

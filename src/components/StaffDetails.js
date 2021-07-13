@@ -7,6 +7,7 @@ function StaffDetails(props) {
   const [show, setShow] = useState(-1)
   useEffect(() => {
     getData()
+    window.scrollTo(0, 500)
   }, [])
   let customerId, authCode
   /*api functions*/

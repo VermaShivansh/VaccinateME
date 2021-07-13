@@ -6,9 +6,6 @@ function Track() {
   const [isTracking, setisTracking] = useState(false)
   const [userData, setuserData] = useState()
   const [customerId, setcustomerId] = useState()
-  useEffect(() => {
-    window.scrollTo(0, 510)
-  }, [])
   async function handleSubmit(e) {
     e.preventDefault()
     try {

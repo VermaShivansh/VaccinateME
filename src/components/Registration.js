@@ -35,16 +35,6 @@ function Registration() {
     pincode: 0,
     locations: "",
   })
-  useEffect(() => {
-    document.querySelector(".phoneField").focus()
-    document.querySelector(".headerdesign").classList.remove("removeHeaderDesign")
-  }, [])
-  useEffect(() => {
-    if (success) {
-      document.querySelector(".firstNameField").focus()
-      window.scrollTo(0, 510)
-    }
-  }, [success])
   async function handleSendOTP(e) {
     e.preventDefault()
     if (phoneNumber.toString().length === 10) {
@@ -119,6 +109,9 @@ function Registration() {
       }
     }
   }, [userData.locations])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className="midbody d-flex justify-content-center flex-column pt-4">
       {/* Below Content is displayed before OTP Validation*/}
@@ -134,10 +127,22 @@ function Registration() {
         <li>5. Authorization Code(Auth Code) is to be given to the staff which will come at your door to vaccinate you in order to complete the vacciantion process.</li>
         <li>6. Use CustomerID to download your certificate.</li>
         <li>
-          In Case of any query please contact at <a href="mailto:shivansh29.sv@gmail.com">Shivansh29.sv@gmail.com</a> or<a href="mailto:srivastava11735@gmail.com">srivastava11735@gmail.com </a>.
+          In Case of any query please contact at{" "}
+          <a target="_blank" href="mailto:shivansh29.sv@gmail.com">
+            Shivansh29.sv@gmail.com
+          </a>{" "}
+          or
+          <a target="_blank" href="mailto:srivastava11735@gmail.com">
+            srivastava11735@gmail.com{" "}
+          </a>
+          .
         </li>
         <li className="mt-2 mb-2">
-          <strong>Please Note:-</strong> It is an app based upon the idea of how would vaccination process work if it would be door-to-door. We are not connected to any official organization. The project is an open-source and can be accessed at <a href="https://github.com/ShivanshVerma-coder/VaccinateME/tree/main">Github Repository</a>.
+          <strong>Please Note:-</strong> It is an app based upon the idea of how would vaccination process work if it would be door-to-door. We are not connected to any official organization. The project is an open-source and can be accessed at{" "}
+          <a target="_blank" href="https://github.com/ShivanshVerma-coder/VaccinateME/tree/main">
+            Github Repository
+          </a>
+          .
         </li>
       </div>
       {!success && (
@@ -148,7 +153,7 @@ function Registration() {
                 <label htmlFor="exampleFormControlInput1" className="form-label mb-4">
                   Enter your Phone Number
                 </label>
-                <MaskedInput mask={[/[1-9]/, /\d/, /\d/, "-", /\d/, /\d/, /\d/, "-", /\d/, /\d/, /\d/, /\d/]} guide={false} autoComplete="off" autoFocus required disabled={otpRequest} onChange={(e) => setphoneNumber(e.target.value.substr(0, 3) + e.target.value.substr(4, 3) + e.target.value.substr(8, 4))} className="phoneField form-control" id="exampleFormControlInput1" placeholder="XXX-XXX-XXXX" />
+                <MaskedInput mask={[/[1-9]/, /\d/, /\d/, "-", /\d/, /\d/, /\d/, "-", /\d/, /\d/, /\d/, /\d/]} guide={false} autoComplete="off" required disabled={otpRequest} onChange={(e) => setphoneNumber(e.target.value.substr(0, 3) + e.target.value.substr(4, 3) + e.target.value.substr(8, 4))} className="phoneField form-control" id="exampleFormControlInput1" placeholder="XXX-XXX-XXXX" />
               </div>
               <div className={`d-flex justify-content-${!otpRequest ? `end` : `between`}`}>
                 {" "}
