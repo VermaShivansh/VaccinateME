@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import Axios from "axios"
 import { useImmer } from "use-immer"
-import { Form, Button, Row, Col, Container, Alert } from "react-bootstrap"
+import { Form, Button, Row, Col, Container, Alert, Accordion } from "react-bootstrap"
 import MaskedInput from "react-text-mask"
 import { Link } from "react-router-dom"
 
@@ -120,9 +120,26 @@ function Registration() {
     }
   }, [userData.locations])
   return (
-    <div className="midbody d-flex justify-content-center">
+    <div className="midbody d-flex justify-content-center flex-column pt-4">
       {/* Below Content is displayed before OTP Validation*/}
-
+      <div className="container col-md-12 align-self-center mb-4" style={{ color: "white" }}>
+        <div className="registerHeading display-1 text-center">Start Registration</div>
+        <div className="mt-3">Steps to have a proper Vaccination :-</div>
+        <li>1. Register with your mobile number.</li>
+        <li>2. Enter correct details (except Aadhar Number because its not an official App).</li>
+        <li>3. After a successful form submission, you will receive a CustomerID and Auth Code.</li>
+        <li>
+          4. <Link to="/track">Track</Link> your vaccination status using your customerID.
+        </li>
+        <li>5. Authorization Code(Auth Code) is to be given to the staff which will come at your door to vaccinate you in order to complete the vacciantion process.</li>
+        <li>6. Use CustomerID to download your certificate.</li>
+        <li>
+          In Case of any query please contact at <a href="mailto:shivansh29.sv@gmail.com">Shivansh29.sv@gmail.com</a> or<a href="mailto:srivastava11735@gmail.com">srivastava11735@gmail.com </a>.
+        </li>
+        <li className="mt-2 mb-2">
+          <strong>Please Note:-</strong> It is an app based upon the idea of how would vaccination process work if it would be door-to-door. We are not connected to any official organization. The project is an open-source and can be accessed at <a href="https://github.com/ShivanshVerma-coder/VaccinateME/tree/main">Github Repository</a>.
+        </li>
+      </div>
       {!success && (
         <div className="midbodyContent align-self-center col-md-5 col-11 col-sm-10">
           <div className="Registration">
@@ -171,9 +188,7 @@ function Registration() {
           </div>
         </div>
       )}
-
       {/*Below Content is displayed after OTP Validation  */}
-
       {success && !isFormSubmitted && (
         <div className="FullDetailsEntryContainer col-12 p-4" style={{ marginTop: "18vh" }}>
           <div className="FullDetailsEntry col-12 col-md-8 mx-auto" style={{ color: "white" }}>
@@ -408,7 +423,6 @@ function Registration() {
           </div>
         </div>
       )}
-
       {/*Below is Final Confirmation Screen*/}
       {success && isFormSubmitted && (
         <Container fluid className="align-self-center">

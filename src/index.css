@@ -255,3 +255,7 @@ td {
   opacity: 1 !important;
   transition: all 700ms ease-in-out !important;
 }
+
+li {
+  list-style: none;
+}
