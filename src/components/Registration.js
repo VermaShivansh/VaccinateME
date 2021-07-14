@@ -396,7 +396,7 @@ function Registration() {
                     }
                     mask={[/\d/, /\d/, /\d/, /\d/, /\d/, /\d/]}
                     className="form-control"
-                    placeholder="226012"
+                    placeholder="XXXXXX"
                     guide={false}
                     id="my-input-id"
                     required
