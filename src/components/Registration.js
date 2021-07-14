@@ -131,9 +131,8 @@ function Registration() {
           <a target="_blank" href="mailto:shivansh29.sv@gmail.com">
             Shivansh29.sv@gmail.com
           </a>{" "}
-          or
+          or{" "}
           <a target="_blank" href="mailto:srivastava11735@gmail.com">
-            {" "}
             srivastava11735@gmail.com{" "}
           </a>
           .
