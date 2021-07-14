@@ -95,7 +95,7 @@ function StaffDetails(props) {
   }
 
   return (
-    <div className="midbody staff p-0 ">
+    <div className="midbody staff p-0 mb-4">
       <div className="text-center col-12 alertingBox p-1">
         {show != -1 && (
           <Alert variant={show ? "success" : "danger"} className="col-md-5 m-auto " onClose={() => setShow(-1)} dismissible>
