@@ -147,7 +147,7 @@ function Registration() {
         </li>
       </div>
       {!success && (
-        <div className="midbodyContent align-self-center col-md-5 col-11 col-sm-10">
+        <div className="midbodyContent align-self-center col-md-5 col-11 col-sm-10 mb-4">
           <div className="Registration">
             <form onSubmit={!otpRequest ? handleSendOTP : handleSubmitOTP} className="RegistrationForm">
               <div className="mb-3">
