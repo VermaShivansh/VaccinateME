@@ -138,7 +138,7 @@ function Registration() {
           .
         </li>
         <li className="mt-2 mb-2">
-          <strong>Please Note:-</strong> It is an app based upon the idea of how would vaccination process work if it would be door-to-door. We are not connected to any official organization. The project is an open-source and can be accessed at{" "}
+          <strong>Please Note:-</strong> It is an app based upon the idea of how would vaccination process work if it would be door-to-door. We are not connected to any official organization and no one will actually come to vaccinate you. The project is an open-source and can be accessed at{" "}
           <a target="_blank" href="https://github.com/ShivanshVerma-coder/VaccinateME/tree/main">
             Github Repository
           </a>
