@@ -13,11 +13,24 @@ function Track() {
       setisTracking(true)
       let response = await Axios.post("/login", { customerId })
       setisTracking(false)
-      // console.log(response.data)
+      console.log(response.data)
       setuserData(response.data)
       settrackRequest(true)
     } catch {
       console.log("error")
+    }
+  }
+  async function cancelAppointment() {
+    if (confirm("Are you sure you want to cancel the Appointment?")) {
+      try {
+        console.log(userData.user._id)
+        let response = await Axios.post("/login/cancel", { id: userData.user._id })
+        if (response.status == 200) {
+          return <Redirect to="/" />
+        }
+      } catch (e) {
+        console.log(e)
+      }
     }
   }
   return (
@@ -143,7 +156,7 @@ function Track() {
             </div>
 
             <div className="col-md-4 cancelAppointment">
-              <button type="button" className={`btn btn-${userData.user.vaccinationSuccessful ? "success" : "danger"}`}>
+              <button type="button" className={`btn btn-${userData.user.vaccinationSuccessful ? "success" : "danger"}`} onClick={userData.user.vaccinationSuccessful ? "" : cancelAppointment}>
                 {userData.user.vaccinationSuccessful ? (
                   <>
                     <i className="fa fa-download" aria-hidden="true"></i> &nbsp;Download Certificate{" "}
