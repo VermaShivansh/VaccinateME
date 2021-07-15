@@ -1,11 +1,13 @@
 import React, { useState } from "react"
 import Axios from "axios"
+import { useHistory } from "react-router-dom"
 
 function Track() {
   const [trackRequest, settrackRequest] = useState(false)
   const [isTracking, setisTracking] = useState(false)
   const [userData, setuserData] = useState()
   const [customerId, setcustomerId] = useState()
+  let history = useHistory()
   async function handleSubmit(e) {
     e.preventDefault()
     try {
@@ -17,16 +19,18 @@ function Track() {
       setuserData(response.data)
       settrackRequest(true)
     } catch {
+      alert("Wrong CustomerID")
+      setisTracking(false)
       console.log("error")
     }
   }
   async function cancelAppointment() {
-    if (confirm("Are you sure you want to cancel the Appointment?")) {
+    if (window.confirm("Are you sure you want to cancel the Appointment?")) {
       try {
         console.log(userData.user._id)
         let response = await Axios.post("/login/cancel", { id: userData.user._id })
         if (response.status == 200) {
-          return <Redirect to="/" />
+          settrackRequest(false)
         }
       } catch (e) {
         console.log(e)
